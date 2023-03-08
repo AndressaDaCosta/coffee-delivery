@@ -1,5 +1,6 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import CoffeeImage from '../../assets/CoffeeDelivery.png'
+import { CoffeeCard } from '../../components/CoffeeCard'
 
 import {
 	IntroContainer,
@@ -7,7 +8,8 @@ import {
 	IntroTitle,
 	IntroItems,
 	ImageBackground,
-	DivContainer
+	DivContainer,
+	CoffeeList
 } from './style'
 
 // Coffees
@@ -80,12 +82,22 @@ export function Home() {
 				/>
 			</IntroContainer>
 			<section>
-				<h2>Nossos cafés: 
-				</h2>
-				<br></br>
+				<h2>Nossos cafés: </h2>
+				<CoffeeList>
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
+				</CoffeeList>
 			</section>
 
-			<div>
+			{/* <div>
 				<img
 					alt=""
 					src={ExpressoTradicional}
@@ -147,7 +159,7 @@ export function Home() {
 					alt=""
 					src={Irlandes}
 				/>
-			</div>
+			</div> */}
 		</DivContainer>
 	)
 }
