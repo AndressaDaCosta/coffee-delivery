@@ -12,10 +12,12 @@ export function Header() {
 	return (
 		<HeaderContainer>
 			<NavContainer>
-				<img
-					src={CoffeeLogo}
-					alt="Copo Roxo de café com um foguete"
-				/>
+				<NavLink to="/">
+					<img
+						src={CoffeeLogo}
+						alt="Copo Roxo de café com um foguete"
+					/>
+				</NavLink>
 				<CityAndCartContainer>
 					<Location>
 						<MapPin
