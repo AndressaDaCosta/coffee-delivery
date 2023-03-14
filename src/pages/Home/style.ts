@@ -5,13 +5,13 @@ export const DivContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
+	align-items: center;
 `
 export const ImageBackground = styled.img`
 	background: url(https://raw.githubusercontent.com/AndressaDaCosta/coffee-delivery/88a80b8165ace4e76564e4dcb9c201e5ba25be9b/src/assets/Background.svg);
-	filter: blur(70px);
+	filter: blur(50px);
 	width: 100%;
-	height: 24rem;
+	height: 34rem;
 	position: absolute;
 	top: 0;
 `
