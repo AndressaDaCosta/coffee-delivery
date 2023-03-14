@@ -1,6 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import CoffeeImage from '../../assets/CoffeeDelivery.png'
 import { CoffeeCard } from '../../components/CoffeeCard'
+import { InfoIcon } from '../../components/InfoIcon'
 
 import {
 	IntroContainer,
@@ -11,7 +12,7 @@ import {
 	DivContainer,
 	CoffeeList,
 	SectionCoffee
-} from './style'
+} from './styles'
 
 // Coffees
 import ExpressoTradicional from '../../assets/Coffees/expresso-tradicional.svg'
@@ -46,39 +47,50 @@ export function Home() {
 					</IntroTitle>
 
 					<IntroItems>
-						<div>
-							<ShoppingCart
-								size={22}
-								weight="fill"
-							/>
-							<p>Compra simples e segura</p>
-						</div>
-						<div>
-							<Package
-								size={22}
-								weight="fill"
-							/>
-							<p>Embalagem mantém o café intacto</p>
-						</div>
-						<div>
-							<Timer
-								size={22}
-								weight="fill"
-							/>
-							<p>Entrega rápida e rastreada</p>
-						</div>
-						<div>
-							<Coffee
-								size={22}
-								weight="fill"
-							/>
-							<p>O café chega fresquinho até você</p>
-						</div>
+						<InfoIcon
+							backgroundColor="orange"
+							icon={
+								<ShoppingCart
+									weight="fill"
+									size={22}
+								/>}
+							text="Compra simples e segura"
+						/>
+
+						<InfoIcon
+							backgroundColor="gray"
+							icon={
+								<Package
+									weight="fill"
+									size={22}
+								/>}
+							text="Embalagem mantém o café intacto"
+						/>
+
+						<InfoIcon
+							backgroundColor="yellow"
+							icon={
+								<Timer
+									weight="fill"
+									size={22}
+								/>}
+							text="Entrega rápida e rastreada"
+						/>
+
+						<InfoIcon
+							backgroundColor="purple"
+							icon={
+								<Coffee
+									weight="fill"
+									size={22} 
+								/>}
+							text="O café chega fresquinho até você"
+						/>
 					</IntroItems>
 				</IntroInfoContainer>
 
 				<img
-					alt=""
+					alt="Copo de café com a logomarca e grãos ao fundo"
 					src={CoffeeImage}
 				/>
 			</IntroContainer>
@@ -86,6 +98,9 @@ export function Home() {
 				<h2>Nossos cafés: </h2>
 
 				<CoffeeList>
+					<CoffeeCard />
+					<CoffeeCard />
+					<CoffeeCard />
 					<CoffeeCard />
 					<CoffeeCard />
 					<CoffeeCard />
