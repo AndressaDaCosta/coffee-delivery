@@ -9,7 +9,8 @@ import {
 	IntroItems,
 	ImageBackground,
 	DivContainer,
-	CoffeeList
+	CoffeeList,
+	SectionCoffee
 } from './style'
 
 // Coffees
@@ -81,8 +82,9 @@ export function Home() {
 					src={CoffeeImage}
 				/>
 			</IntroContainer>
-			<section>
+			<SectionCoffee>
 				<h2>Nossos cafés: </h2>
+
 				<CoffeeList>
 					<CoffeeCard />
 					<CoffeeCard />
@@ -95,7 +97,7 @@ export function Home() {
 					<CoffeeCard />
 					<CoffeeCard />
 				</CoffeeList>
-			</section>
+			</SectionCoffee>
 
 			{/* <div>
 				<img
