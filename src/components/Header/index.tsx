@@ -6,7 +6,7 @@ import {
 	NavContainer,
 	CityAndCartContainer,
 	Location
-} from './style'
+} from './styles'
 
 export function Header() {
 	return (

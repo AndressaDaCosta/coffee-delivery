@@ -14,7 +14,7 @@ import {
 	LessButton,
 	PlusButton,
 	CartButton
-} from './style'
+} from './styles'
 
 export function CoffeeCard() {
 	return (
