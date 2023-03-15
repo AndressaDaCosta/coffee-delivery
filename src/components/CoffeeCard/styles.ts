@@ -74,15 +74,20 @@ export const CardFooter = styled.footer`
 	width: 100%;
 `
 
-export const Price = styled.footer`
+export const Price = styled.div`
 	font-family: 'Baloo 2', sans-serif;
 	font-size: 1.5rem;
 	font-weight: 800;
+
+	span:first-child {
+		font-size: 0.875rem;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+	}
 `
 
 export const AmountAndCart = styled.div`
 	display: flex;
-
 	gap: 0.5rem;
 `
 
