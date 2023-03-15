@@ -12,7 +12,7 @@ export const coffees = [
 		tags: ['tradicional'],
 		name: 'Expresso Americano',
 		description: 'Expresso diluído, menos intenso que o tradicional',
-		photo: 'exresso-americano.svg',
+		photo: 'expresso-americano.svg',
 		price: 9.9
 	},
 	{
