@@ -2,6 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import CoffeeImage from '../../assets/CoffeeDelivery.png'
 import { CoffeeCard } from '../../components/CoffeeCard'
 import { InfoIcon } from '../../components/InfoIcon'
+import { coffees } from '../../data/coffees'
 
 import {
 	IntroContainer,
@@ -14,21 +15,6 @@ import {
 	SectionCoffee
 } from './styles'
 
-// Coffees
-import ExpressoTradicional from '../../assets/Coffees/expresso-tradicional.svg'
-import ExpressoAmericano from '../../assets/Coffees/expresso-americano.svg'
-import ExpressoCremoso from '../../assets/Coffees/expresso-cremoso.svg'
-import ExpressoGelado from '../../assets/Coffees/expresso-gelado.svg'
-import CafeComLeite from '../../assets/Coffees/cafe-com-leite.svg'
-import Latte from '../../assets/Coffees/latte.svg'
-import Capuccino from '../../assets/Coffees/capuccino.svg'
-import Macchiato from '../../assets/Coffees/macchiato.svg'
-import Mocaccino from '../../assets/Coffees/mocaccino.svg'
-import ChocolateQuente from '../../assets/Coffees/chocolate-quente.svg'
-import Cubano from '../../assets/Coffees/cubano.svg'
-import Havaiano from '../../assets/Coffees/havaiano.svg'
-import Arabe from '../../assets/Coffees/arabe.svg'
-import Irlandes from '../../assets/Coffees/irlandes.svg'
 
 export function Home() {
 	return (
@@ -53,7 +39,8 @@ export function Home() {
 								<ShoppingCart
 									weight="fill"
 									size={22}
-								/>}
+								/>
+							}
 							text="Compra simples e segura"
 						/>
 
@@ -63,7 +50,8 @@ export function Home() {
 								<Package
 									weight="fill"
 									size={22}
-								/>}
+								/>
+							}
 							text="Embalagem mantém o café intacto"
 						/>
 
@@ -73,7 +61,8 @@ export function Home() {
 								<Timer
 									weight="fill"
 									size={22}
-								/>}
+								/>
+							}
 							text="Entrega rápida e rastreada"
 						/>
 
@@ -82,8 +71,9 @@ export function Home() {
 							icon={
 								<Coffee
 									weight="fill"
-									size={22} 
-								/>}
+									size={22}
+								/>
+							}
 							text="O café chega fresquinho até você"
 						/>
 					</IntroItems>
@@ -98,19 +88,12 @@ export function Home() {
 				<h2>Nossos cafés: </h2>
 
 				<CoffeeList>
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
-					<CoffeeCard />
+					{coffees.map((coffee) => (
+						<CoffeeCard
+							key={coffee.id}
+							coffee={coffee}
+						/>
+					))}
 				</CoffeeList>
 			</SectionCoffee>
 
