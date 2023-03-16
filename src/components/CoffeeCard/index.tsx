@@ -1,4 +1,4 @@
-import { ShoppingCart } from 'phosphor-react'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 
 import {
 	CoffeeCardContainer,
@@ -58,9 +58,17 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 
 				<AmountAndCart>
 					<AmountButtonContainer>
-						<LessButton> - </LessButton>
-						<span>1</span>
-						<PlusButton> + </PlusButton>
+						<LessButton>
+							<Minus weight="bold" />
+						</LessButton>
+						<input
+							placeholder="1"
+							type="number"
+							readOnly
+						/>
+						<PlusButton>
+							<Plus weight="bold" />
+						</PlusButton>
 					</AmountButtonContainer>
 
 					<CartButton>

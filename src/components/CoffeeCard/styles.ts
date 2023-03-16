@@ -72,12 +72,14 @@ export const CardFooter = styled.footer`
 	align-items: center;
 	margin-top: 2.06rem;
 	width: 100%;
+	gap: 1.5rem;
 `
 
 export const Price = styled.div`
 	font-family: 'Baloo 2', sans-serif;
 	font-size: 1.5rem;
 	font-weight: 800;
+	/* margin-right: 0.3rem; */
 
 	span:first-child {
 		font-size: 0.875rem;
@@ -106,17 +108,38 @@ export const CartButton = styled.button`
 export const AmountButtonContainer = styled.div`
 	background: ${(props) => props.theme['base-button']};
 	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	text-align: center;
 	align-items: center;
 	border-radius: 6px;
-	gap: 0.25rem;
+
+	input {
+		width: 100%;
+		text-align: center;
+		background: transparent;
+		border: none;
+
+		color: ${(props) => props.theme['base-title']};
+
+		&:focus {
+			outline: 0;
+		}
+	}
 `
 
 const AmountButtons = styled.button`
 	background: transparent;
 	color: ${(props) => props.theme['purple-color']};
-	font-size: 1.25rem;
+	font-size: 0.875rem;
 	cursor: pointer;
 	border: 0;
+	line-height: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
 `
 
 export const LessButton = styled(AmountButtons)`
@@ -126,6 +149,6 @@ export const LessButton = styled(AmountButtons)`
 `
 export const PlusButton = styled(AmountButtons)`
 	font-size: 1.25rem;
-	padding-left: 0.25rem;
+	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 `
