@@ -129,17 +129,21 @@ export const AmountButtonContainer = styled.div`
 `
 
 const AmountButtons = styled.button`
-	background: transparent;
-	color: ${(props) => props.theme['purple-color']};
-	font-size: 0.875rem;
-	cursor: pointer;
-	border: 0;
-	line-height: 0;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
+	font-size: 0.875rem;
+	cursor: pointer;
+	line-height: 0;
+	border: 0;
+
+	background: transparent;
+	color: ${(props) => props.theme['purple-color']};
+
+	&:hover {
+		color: ${(props) => props.theme['purple-dark']};
+	}
 `
 
 export const LessButton = styled(AmountButtons)`
