@@ -1,7 +1,7 @@
-import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
+import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
+import { InfoIcon } from '../../components/InfoIcon'
 import CoffeeImage from '../../assets/CoffeeDelivery.png'
 import { CoffeeCard } from '../../components/CoffeeCard'
-import { InfoIcon } from '../../components/InfoIcon'
 import { coffees } from '../../data/coffees'
 
 import {
@@ -10,15 +10,14 @@ import {
 	IntroTitle,
 	IntroItems,
 	ImageBackground,
-	DivContainer,
+	HomeContainer,
 	CoffeeList,
 	SectionCoffee
 } from './styles'
 
-
 export function Home() {
 	return (
-		<DivContainer>
+		<HomeContainer>
 			<ImageBackground />
 			<IntroContainer>
 				<IntroInfoContainer>
@@ -96,70 +95,6 @@ export function Home() {
 					))}
 				</CoffeeList>
 			</SectionCoffee>
-
-			{/* <div>
-				<img
-					alt=""
-					src={ExpressoTradicional}
-				/>
-
-				<img
-					alt=""
-					src={ExpressoAmericano}
-				/>
-				<img
-					alt=""
-					src={ExpressoCremoso}
-				/>
-				<img
-					alt=""
-					src={ExpressoGelado}
-				/>
-				<img
-					alt=""
-					src={CafeComLeite}
-				/>
-				<img
-					alt=""
-					src={Latte}
-				/>
-				<img
-					alt=""
-					src={Capuccino}
-				/>
-				<img
-					alt=""
-					src={Macchiato}
-				/>
-				<img
-					alt=""
-					src={Mocaccino}
-				/>
-				<img
-					alt=""
-					src={ChocolateQuente}
-				/>
-				<img
-					alt=""
-					src={Cubano}
-				/>
-				<img
-					alt=""
-					src={Mocaccino}
-				/>
-				<img
-					alt=""
-					src={Havaiano}
-				/>
-				<img
-					alt=""
-					src={Arabe}
-				/>
-				<img
-					alt=""
-					src={Irlandes}
-				/>
-			</div> */}
-		</DivContainer>
+		</HomeContainer>
 	)
 }

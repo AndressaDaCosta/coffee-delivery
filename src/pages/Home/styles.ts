@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const DivContainer = styled.div`
+export const HomeContainer = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -60,6 +60,14 @@ export const IntroItems = styled.div`
 export const SectionCoffee = styled.section`
 	width: 100%;
 	max-width: 75rem;
+
+	h2 {
+		font-family: 'Baloo 2', sans-serif;
+		font-weight: bold;
+		font-size: 2rem;
+		margin-bottom: 2.875rem;
+		color: ${(props) => props.theme['base-subtitle']};
+	}
 `
 
 export const CoffeeList = styled.div`
