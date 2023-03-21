@@ -1,61 +1,44 @@
-import { AddressForm, CheckoutContainer, PaymentOptions } from './styles'
+import { MapPinLine } from 'phosphor-react'
+
+import { Input } from '../../components/Input'
+import { AddressAndPayment, CheckoutContainer, FormContainer, FormHeader, PaymentOptions, Form, Title, ConfirmOrder } from './styles'
 
 export function Checkout() {
 	return (
 		<CheckoutContainer>
-			<AddressForm>
-				<input
-					type="text"
-					placeholder="CEP"
-				/>
-				<input
-					type="text"
-					placeholder="Rua"
-				/>
-				<input
-					type="text"
-					placeholder="Número"
-				/>
-				<input
-					type="text"
-					placeholder="Complemento"
-				/>
-				<input
-					type="text"
-					placeholder="Bairro"
-				/>
-				<input
-					type="text"
-					placeholder="Cidade"
-				/>
-				<input
-					type="text"
-					placeholder="UF"
-				/>
-			</AddressForm>
+		<AddressAndPayment>
+		  <Title>Complete seu pedido</Title>
+		  <FormContainer>
+			<FormHeader>
+			  <span>
+				<MapPinLine />
+			  </span>
+			  <div>
+				<h4>Endereço de Entrega</h4>
+				<p>Informe o endereço onde deseja receber seu pedido</p>
+			  </div>
+			</FormHeader>
+  
+			
+			  <Form>
+			  <Input placeholder='CEP' type='number' className='cep'/>
+			  <Input placeholder='Rua' type='string' />
+			  
+			  </Form>
+			
+		  </FormContainer>
 			<PaymentOptions>
-				<label>
-					<input
-						type="button"
-						name="opcao-pagamento"
-					/>
-					Cartão de Crédito
-				</label>
-				<label>
-					<input
-						type="radio"
-						name="opcao-pagamento"
-					/>
-					Cartão de Débito
-				</label>
-				<label>
-					<input
-						type="radio"
-						name="opcao-pagamento"
-					/>
-					Boleto Bancário
-				</label>
+				<span>cartão de crédito</span>
+				<span>cartão de débito</span>
+				<span>Dinheiro</span>
+
+
 			</PaymentOptions>
-		</CheckoutContainer>
+		</AddressAndPayment>
+  
+		<ConfirmOrder>
+		  <h3>Cafés selecionados</h3>
+		</ConfirmOrder>
+	  </CheckoutContainer>
 	)
 }
