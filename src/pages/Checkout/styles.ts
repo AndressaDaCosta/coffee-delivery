@@ -63,6 +63,11 @@ export const Form = styled.div`
 	column-gap: 0.75rem;
 	row-gap: 1rem;
 	grid-auto-flow: dense;
+
+	.cep {
+		grid-column: span 3;
+		max-width: 12.5rem;
+	}
 `
 export const PaymentOptions = styled.div`
 	display: flex;
