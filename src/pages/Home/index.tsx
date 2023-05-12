@@ -79,7 +79,7 @@ export function Home() {
 				</IntroInfoContainer>
 
 				<img
-					alt="Copo de café com a logomarca e grãos ao fundo"
+					alt="Copo de café com a logomarca e grãos de café ao fundo"
 					src={CoffeeImage}
 				/>
 			</IntroContainer>
